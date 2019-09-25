@@ -1,0 +1,51 @@
+
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+} 
+</style>
+</head>
+<body bgcolor="#E6E6FA">
+<center>
+<h2>Student Information Data</h2> 
+
+</center>
+<table style="width:100%">
+<tr>
+		<th st-sort="getters.id">Student ID</th>
+		<th st-sort="Name">Student Name</th>
+		<th st-sort="Address">Address</th>
+		<th st-sort="Mobile">Mobile</th>
+		<th st-sort="Course">Course</th>
+		<th st-sort="City">City</th>
+		
+	</tr>
+   {% for item in student %}
+	<tr ng-repeat="row in rowCollection">
+		<td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+	<td>{{ item.address }}</td>
+	<td>{{ item.mobile }}</td>
+	<td>{{ item.course }}</td>
+	<td>{{ item.city }}</td>
+	</tr>
+	 {% endfor %}
+</table><br><br>
+<center>
+
+<form>
+<input type="submit"  formaction="{% url 'home' %}" value="Back TO Main Menu....!" />
+</form>
+</center>
+</body>
+</html>
+
+
+  

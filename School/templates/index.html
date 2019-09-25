@@ -1,0 +1,30 @@
+<html>
+
+<body bgcolor="#E6E6FA">
+<form action="{% url 'home' %}" method="POST" >
+ {% csrf_token %}
+<br><br>
+<center><font size=4><b><h2>Student Information Form</h2></b></font>
+<br>
+Name            <input type=text name="textnames" size="30"><br><br>
+
+Address  <input type="text" name="textaddress" id="textaddress" size="30"><br><br>
+
+Mobile
+<input type="text" name="textmobile" id="textmobile" size="30">
+<br><br>
+
+Course <input type=text name=textcourse id="textcourse" size="30">
+ 
+<br><br>
+City       <input type=text name=textcity id="textcity" size="30"><br><br>
+
+ 
+ 
+<input type="reset">
+<input type="submit" value="Submit Data..!" />
+<input type="submit"  formaction="{% url 'showdata' %}" value="Show Data..!" />
+</center>
+</form> 
+</body>
+</html>
